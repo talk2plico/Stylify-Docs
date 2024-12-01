@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylify Docs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Stylify Docs</h1>
+
+    <div class="file-upload">
+        <input type="file" id="fileInput" accept=".docx, .pdf, .txt">
+        <button id="upload" onclick="handleFileUpload()">Upload Document</button>
+    </div>
+
+    <div class="controls">
+        <h2>Document Analysis</h2>
+        <button id="analyze" onclick="analyzeDocument()">Analyze Content</button>
+
+        <h2>Styles</h2>
+        <label for="templateSelect">Choose a Template:</label>
+        <select id="templateSelect">
+            <option value="template1">Template 1</option>
+            <option value="template2">Template 2</option>
+            <option value="template3">Template 3</option>
+        </select>
+
+        <label for="fontSelect">Choose Font:</label>
+        <select id="fontSelect">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+
+        <button id="applyStyles" onclick="applyStyles()">Apply Styles</button>
+    </div>
+
+    <div id="styledDocumentPreview">
+        <h2>Styled Document Preview</h2>
+        <div id="previewContent"></div>
+        <button id="generatePreviewButton" onclick="generatePreview()">Generate Preview</button>
+        <button id="downloadButton" onclick="downloadDocument()">Download Document</button>
+    </div>
+
+    <div class="export-options">
+        <button id="exportPDF" onclick="exportToPDF()">Export as PDF</button>
+        <button id="exportEbook" onclick="exportToEbook()">Export as eBook</button>
+        <button id="exportPrint" onclick="exportToPrint()">Export for Print</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
